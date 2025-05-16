@@ -6,7 +6,7 @@ body {
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 60px 20px 0 20px;
+  padding: 60px 20px 0 20px; /* padding-top adjusted for fixed header */
   box-sizing: border-box;
 }
 
@@ -139,7 +139,7 @@ footer {
   font-size: 1.5em;
 }
 
-/* Icon Links (Top Right) */
+/* Icon Links (top right) */
 .icon-links {
   position: fixed;
   top: 15px;
@@ -320,12 +320,13 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Top Bar - Responsive Navigation */
+/* Top Bar - Fixed header */
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   background-color: #1e1e2f;
   display: flex;
   flex-wrap: wrap;
@@ -337,9 +338,10 @@ footer {
   box-sizing: border-box;
 }
 
+/* Profile Name */
 .profile-name {
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   flex: 1 1 100%;
   text-align: center;
@@ -349,10 +351,10 @@ footer {
 /* Navigation Menu */
 nav.menu {
   display: flex;
-  flex: 1 1 100%;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  width: 100%;
 }
 
 nav.menu a {
@@ -366,19 +368,18 @@ nav.menu a:hover {
   color: #00aaff;
 }
 
-/* Responsive Menu for smaller screens */
+/* Responsive Icon Links */
+.icon-links {
+  position: static;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+/* Extra responsive tweaks */
 @media screen and (max-width: 500px) {
-  nav.menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .btn {
-    padding: 10px 25px;
-    font-size: 14px;
-  }
-
   .hero-text h1 {
     font-size: 2em;
   }
@@ -389,5 +390,14 @@ nav.menu a:hover {
 
   .hero-text p {
     font-size: 1.1em;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  nav.menu {
+    flex-direction: column;
   }
 }
