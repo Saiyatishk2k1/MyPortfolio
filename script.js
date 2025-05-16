@@ -1,13 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".section");
-  
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('nav.menu');
+
+  menuToggle.addEventListener('click', function () {
+    menu.classList.toggle('active');
+  });
+});
+
       },
       {
         threshold: 0.1,
