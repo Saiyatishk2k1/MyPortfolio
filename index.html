@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,24 +9,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
   <!-- Header -->
   <header class="top-bar">
     <div class="profile-name">Sai Yatish Kinthali</div>
+
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+
     <nav class="menu">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+
     <div class="icon-links">
       <a href="https://github.com/Saiyatishk2k1" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/saiyatishkinthali" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -37,8 +38,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
-      <h1 class="typing-effect">Hey, I am Sai Yatish</h1>
-      <h2 class="smaller-text">Electronics and Communication Engineer</h2>
+      <h1>Hey, I am Sai Yatish</h1>
+      <h2>Electronics and Communication Engineer</h2>
       <p>Cybersecurity | Photography</p>
       <a href="resume.pdf" class="btn" target="_blank">Resume</a>
     </div>
@@ -81,15 +82,14 @@
   <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="projects-container">
+
       <div class="project-card">
         <div class="project-img">
           <img src="Foot Step Power Generator.png" alt="Foot Step Power Generator">
         </div>
         <div class="project-details">
           <h3>Foot Step Power Generator</h3>
-          <p>Developed a renewable energy solution utilizing piezoelectric sensors to harness energy from footsteps.
-            This project explores alternative energy sources and promotes sustainability through innovative solutions.
-          </p>
+          <p>Developed a renewable energy solution utilizing piezoelectric sensors to harness energy from footsteps.</p>
         </div>
       </div>
 
@@ -99,8 +99,7 @@
         </div>
         <div class="project-details">
           <h3>Home Security Automation</h3>
-          <p>Created a motion-detection system that provides real-time alerts to enhance home security. The system is
-            designed to be easy to install and use, providing peace of mind with minimal effort.</p>
+          <p>Created a motion-detection system that provides real-time alerts to enhance home security.</p>
         </div>
       </div>
 
@@ -110,21 +109,17 @@
         </div>
         <div class="project-details">
           <h3>Hand Motion & Voice Recognition</h3>
-          <p>Designed an AI-powered tool enabling gesture-based drawing and voice commands for improved user
-            interaction. This project merges hardware and software to create an intuitive and hands-free user
-            experience.</p>
+          <p>Designed an AI-powered tool enabling gesture-based drawing and voice commands.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-img">
-          <img src="Object Detection Using YOLO V4 & Raspberry Pi.png" alt="Object Detection Using YOLO V4 & Raspberry Pi">
+          <img src="Object Detection Using YOLO V4 & Raspberry Pi.png" alt="YOLO V4 on Raspberry Pi">
         </div>
         <div class="project-details">
-          <h3>Object Detection Using YOLO V4 & Raspberry Pi</h3>
-          <p>Developed a lightweight YOLOv4-Tiny detection system for real-time object tracking on Raspberry Pi,
-            featuring Non-Maximum Suppression (NMS), FPS tracking, and more for improved detection accuracy and
-            performance.</p>
+          <h3>Object Detection Using YOLO V4</h3>
+          <p>Developed a lightweight YOLOv4-Tiny system for real-time object detection on Raspberry Pi.</p>
         </div>
       </div>
 
@@ -134,11 +129,10 @@
         </div>
         <div class="project-details">
           <h3>Vedrishi AI Assistant</h3>
-          <p>Created a real-time AI assistant named Vedrishi that interacts in Telugu, Hindi, and English. It supports
-            voice and text communication and has a knowledge base from Hindu scriptures, offering intelligent assistance
-            and automation in real-time.</p>
+          <p>Created a real-time AI assistant that supports Telugu, Hindi, and English with voice & text interaction.</p>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -166,7 +160,7 @@
       <h3>Cloud & Cybersecurity</h3>
       <div class="skills-container">
         <div class="skill-card">AWS</div>
-        <div class="skill-card">Google Cloud Platform (GCP)</div>
+        <div class="skill-card">GCP</div>
         <div class="skill-card">Cybersecurity Best Practices</div>
         <div class="skill-card">Data Engineering</div>
       </div>
@@ -177,7 +171,7 @@
       <div class="skills-container">
         <div class="skill-card">VS Code</div>
         <div class="skill-card">GitHub</div>
-        <div class="skill-card">Jupyter Notebook</div>
+        <div class="skill-card">Jupyter</div>
         <div class="skill-card">Salesforce</div>
         <div class="skill-card">Canva</div>
       </div>
@@ -187,7 +181,7 @@
       <h3>Soft Skills</h3>
       <div class="skills-container">
         <div class="skill-card">Time Management</div>
-        <div class="skill-card">Effective Communication</div>
+        <div class="skill-card">Communication</div>
       </div>
     </div>
   </section>
@@ -213,20 +207,16 @@
   </footer>
 
   <!-- Script -->
-  <script src="script.js"></script>
-
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('nav.menu');
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('nav.menu');
 
-    menuToggle.addEventListener('click', function () {
-      menu.classList.toggle('active');
+      menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('active');
+      });
     });
-  });
-</script>
-
+  </script>
 
 </body>
-
 </html>
