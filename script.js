@@ -6,15 +6,3 @@ document.addEventListener('DOMContentLoaded', function () {
     menu.classList.toggle('active');
   });
 });
-
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-  
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  });
-  
