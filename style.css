@@ -381,12 +381,25 @@ footer {
 .smaller-text {
   font-size: 1.5em;
 }
+
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Updated Media Query for Mobile */
 @media screen and (max-width: 768px) {
   .top-bar {
     flex-direction: row;
-    height: auto;
-    padding: 10px 20px;
+    align-items: center;
     justify-content: space-between;
+    height: 60px;
+    padding: 10px 20px;
   }
 
   .menu-toggle {
@@ -397,14 +410,15 @@ footer {
     display: none;
     position: absolute;
     top: 60px;
-    right: 20px;
-    background: #1e1e2f;
+    right: 10px;
+    background-color: #1e1e2f;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    z-index: 1000;
   }
 
   nav.menu.show {
@@ -413,6 +427,15 @@ footer {
 
   nav.menu a {
     margin: 10px 0;
+    color: #ffffff;
     font-size: 1rem;
+    font-weight: 500;
+  }
+
+  /* Optional: make icon-links drop below nav */
+  .icon-links {
+    position: absolute;
+    top: 130px; /* below nav */
+    right: 20px;
   }
 }
