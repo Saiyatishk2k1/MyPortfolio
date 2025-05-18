@@ -403,3 +403,56 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* === Responsive Navigation === */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1e1e2f;
+    padding: 10px 0;
+  }
+
+  nav.menu.active {
+    display: flex;
+  }
+
+  nav.menu a {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #333;
+  }
+
+  .icon-links {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .icon-links a {
+    font-size: 1.3rem;
+    margin: 0 10px;
+  }
+}
