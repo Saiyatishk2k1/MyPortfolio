@@ -127,6 +127,11 @@ footer {
   margin-bottom: 20px;
 }
 
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
 .hero .btn {
   background: #00aaff;
   padding: 12px 20px;
