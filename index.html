@@ -18,21 +18,24 @@
 
   <!-- Header -->
   <header class="top-bar">
+    <div class="top-bar">
     <div class="profile-name">Sai Yatish Kinthali</div>
 
-    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <div class="menu-toggle">&#9776;</div>
 
     <nav class="menu">
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="icon-links">
-      <a href="https://github.com/Saiyatishk2k1" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/saiyatishkinthali" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="GitHub" aria-label="GitHub">&#x1F5C3;</a>
+      <a href="#" title="LinkedIn" aria-label="LinkedIn">&#x1F465;</a>
+      <a href="#" title="Twitter" aria-label="Twitter">&#x1F426;</a>
     </div>
+  </div>
   </header>
 
   <!-- Hero Section -->
@@ -208,23 +211,15 @@
   </footer>
 
   <!-- Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('nav.menu');
-      const links = document.querySelectorAll('nav.menu a');
+  <script src="script.js"></script>
 
-      menuToggle.addEventListener('click', function () {
-        menu.classList.toggle('active');
-      });
-
-      links.forEach(link => {
-        link.addEventListener('click', () => {
-          menu.classList.remove('active');
-        });
-      });
-    });
-  </script>
+  <!-- Dummy content to test scrolling -->
+  <div style="padding: 20px; max-width: 800px; margin: auto;">
+    <h1>Welcome</h1>
+    <p>Scroll to see the fixed top bar behavior.</p>
+    <p>Resize the window to see the responsive menu toggle.</p>
+    <p style="margin-top: 1000px;">Bottom content</p>
+  </div>
 
 
 </body>
