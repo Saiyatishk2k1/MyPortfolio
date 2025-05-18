@@ -20,6 +20,10 @@
   <!-- Header -->
   <header class="top-bar">
     <div class="profile-name">Sai Yatish Kinthali</div>
+     <!-- Inside .top-bar -->
+     <div class="menu-toggle" onclick="toggleMenu()">
+          &#9776; <!-- Unicode for hamburger icon -->
+    </div>
     <nav class="menu">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -30,10 +34,7 @@
       <a href="https://github.com/Saiyatishk2k1" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/saiyatishkinthali" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
-    <!-- Inside .top-bar -->
-     <div class="menu-toggle" onclick="toggleMenu()">
-          &#9776; <!-- Unicode for hamburger icon -->
-    </div>
+   
 
   </header>
 
@@ -220,12 +221,13 @@
       });
     });
   </script>
-  <script>
+<script>
   function toggleMenu() {
     const menu = document.querySelector('nav.menu');
     menu.classList.toggle('show');
   }
 </script>
+
 
 
 </body>
