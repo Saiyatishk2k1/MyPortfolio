@@ -22,7 +22,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Top Bar Styles */
+/* Top Bar - Fixed header */
 .top-bar {
   position: fixed;
   top: 0;
@@ -38,29 +38,34 @@ a:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Profile Name */
 .profile-name {
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
+/* Navigation Menu */
 nav.menu {
   display: flex;
   gap: 30px;
   background: transparent;
-  box-shadow: none;
   padding: 0;
+  position: fixed;
+  top: 20px;
+  right: 100px; /* leave space for icons */
+  z-index: 1000;
 }
 
 nav.menu a {
   color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav.menu a:hover {
-  color: #00aaff;
+  color: #412953;
 }
 
 /* Adjust body padding so content doesn't go under header */
@@ -114,34 +119,18 @@ footer {
   align-items: center;
   height: 100vh;
   text-align: center;
-  background: #1e1e2f;
+  background: linear-gradient(to right, #3b1f49 0%, #2a50d3 100%);
+  color: white;
 }
 
-.hero-text {
-  max-width: 600px;
-  color: #fff;
+.hero-text h1,
+.hero-text h2 {
+  font-size: 3em;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.hero .btn {
-  background: #00aaff;
-  padding: 12px 20px;
-  color: #fff;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
-
-.hero .btn:hover {
-  background: #008ecc;
+.hero-text p {
+  font-size: 1.5em;
+  margin-top: 10px;
 }
 
 /* Icon Links */
