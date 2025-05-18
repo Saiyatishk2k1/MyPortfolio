@@ -381,3 +381,38 @@ footer {
 .smaller-text {
   font-size: 1.5em;
 }
+@media screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: row;
+    height: auto;
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #1e1e2f;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: auto;
+  }
+
+  nav.menu.show {
+    display: flex;
+  }
+
+  nav.menu a {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+}
