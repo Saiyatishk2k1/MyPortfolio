@@ -152,6 +152,12 @@ footer {
   color: #00aaff;
 }
 
+.project-category {
+  margin: 40px 0 20px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -439,3 +445,4 @@ footer {
     right: 20px;
   }
 }
+
