@@ -446,3 +446,39 @@ footer {
   }
 }
 
+/* Project Section Titles */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 60px 0 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-title .icon {
+  font-size: 1.6rem;
+}
+
+/* Accent colors per domain */
+.section-title.cyber {
+  border-color: #00aaff;
+}
+
+.section-title.ai {
+  border-color: #9b7bff;
+}
+
+.section-title.embedded {
+  border-color: #5dd39e;
+}
+
+.section-title:hover {
+  text-shadow: 0 0 10px rgba(0, 170, 255, 0.4);
+}
+
+
+
