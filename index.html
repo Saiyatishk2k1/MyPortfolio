@@ -19,6 +19,22 @@
   <!-- Animated Background Particles -->
   <div class="particles-container" id="particles"></div>
 
+  <!-- Cursor Trail Effect -->
+  <canvas id="cursorCanvas"></canvas>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- Header -->
   <header class="top-bar">
     <div class="profile-name">
@@ -61,9 +77,13 @@
           <span class="tagline-word">Innovate</span>
         </div>
         <p class="hero-description">
-          <span class="badge">CEH Certified</span>
+          <span class="badge clickable-badge" onclick="window.open('ceh-certificate.pdf', '_blank')">
+            <i class="fas fa-certificate"></i> CEH Certified
+          </span>
           <span class="badge">Cybersecurity</span>
-          <span class="badge">Photography</span>
+          <span class="badge clickable-badge" onclick="window.open('https://www.instagram.com/YOUR_INSTAGRAM_USERNAME', '_blank')">
+            <i class="fab fa-instagram"></i> Photography
+          </span>
         </p>
         <div class="hero-buttons">
           <a href="resume.pdf" class="btn btn-primary" target="_blank">
@@ -468,100 +488,6 @@
 
   <!-- Script -->
   <script src="script.js"></script>
-
-  <!-- Enhanced Visitor Analytics with fallback -->
-  <script>
-    // Simple visitor tracking (works immediately without setup)
-    async function trackVisitor() {
-      try {
-        const visitorData = {
-          timestamp: new Date().toISOString(),
-          page: window.location.href,
-          referrer: document.referrer || 'Direct Visit',
-          device: getDeviceType(),
-          browser: getBrowserName(),
-          language: navigator.language,
-          screenResolution: `${screen.width}x${screen.height}`,
-          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-        };
-
-        // Try to get location data
-        try {
-          const response = await fetch('https://ipapi.co/json/');
-          const locationData = await response.json();
-          
-          visitorData.ip = locationData.ip || 'Unknown';
-          visitorData.city = locationData.city || 'Unknown';
-          visitorData.country = locationData.country_name || 'Unknown';
-          visitorData.region = locationData.region || 'Unknown';
-        } catch (e) {
-          visitorData.location = 'Location API unavailable';
-        }
-
-        // Log to console
-        console.log('🎯 === Portfolio Visitor ===');
-        console.log('⏰ Time:', new Date(visitorData.timestamp).toLocaleString());
-        console.log('🔗 From:', visitorData.referrer);
-        console.log('📱 Device:', visitorData.device);
-        console.log('💻 Browser:', visitorData.browser);
-        if (visitorData.city) {
-          console.log('📍 Location:', `${visitorData.city}, ${visitorData.country}`);
-        }
-        console.log('===========================');
-
-        // Store locally
-        let visitors = JSON.parse(localStorage.getItem('portfolioVisitors') || '[]');
-        visitors.push(visitorData);
-        if (visitors.length > 100) visitors = visitors.slice(-100);
-        localStorage.setItem('portfolioVisitors', JSON.stringify(visitors));
-
-        // Track with Google Analytics if available
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'page_view', {
-            page_title: document.title,
-            page_location: window.location.href,
-            page_referrer: document.referrer
-          });
-        }
-
-      } catch (error) {
-        console.error('Analytics error:', error);
-      }
-    }
-
-    function getDeviceType() {
-      const ua = navigator.userAgent;
-      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) return "Tablet";
-      if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry/.test(ua)) return "Mobile";
-      return "Desktop";
-    }
-
-    function getBrowserName() {
-      const ua = navigator.userAgent;
-      if (ua.includes("Firefox")) return "Firefox";
-      if (ua.includes("Chrome") && !ua.includes("Edg")) return "Chrome";
-      if (ua.includes("Safari") && !ua.includes("Chrome")) return "Safari";
-      if (ua.includes("Edg")) return "Edge";
-      if (ua.includes("Opera") || ua.includes("OPR")) return "Opera";
-      return "Unknown";
-    }
-
-    window.addEventListener('load', trackVisitor);
-
-    // Console command to view all visitors
-    window.viewVisitors = function() {
-      const visitors = JSON.parse(localStorage.getItem('portfolioVisitors') || '[]');
-      console.table(visitors);
-      console.log(`📊 Total visits tracked: ${visitors.length}`);
-      return visitors;
-    };
-
-    // Console command to clear visitor data
-    window.clearVisitors = function() {
-      localStorage.removeItem('portfolioVisitors');
-      console.log('✅ Visitor data cleared!');
-    };
-  </script>
 
 </body>
 </html>
