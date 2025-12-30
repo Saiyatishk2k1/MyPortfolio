@@ -911,25 +911,6 @@ nav.menu {
   box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
 }
 
-.skill-pill.highlight {
-  background: var(--primary);
-  border-color: var(--primary);
-  font-weight: 600;
-  cursor: default;
-}
-
-/* Remove hover effects for CEH Certified pill */
-.skill-pill.highlight:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  transform: none;
-  box-shadow: none;
-}
-
-.skill-pill.highlight::before {
-  display: none;
-}
-
 /* Projects Section */
 .projects-section {
   background: rgba(30, 30, 47, 0.3);
