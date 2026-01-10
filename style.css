@@ -1394,3 +1394,14 @@ nav.menu {
     display: none;
   }
 }
+
+/* MOBILE FIX - Hide social icons, prevent overlap */
+@media screen and (max-width: 768px) {
+  .icon-links {
+    display: none;
+  }
+  
+  .menu-toggle {
+    margin-left: auto;
+  }
+}
